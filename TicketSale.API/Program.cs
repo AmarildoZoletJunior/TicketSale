@@ -1,3 +1,5 @@
+using TicketSale.CrossCutting.Helper;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -16,6 +18,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseMiddleware(typeof(ExceptionHelper));
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
