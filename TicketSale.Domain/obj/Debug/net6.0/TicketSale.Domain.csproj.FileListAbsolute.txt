@@ -1,0 +1,12 @@
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Domain\obj\Debug\net6.0\TicketSale.Domain.csproj.AssemblyReference.cache
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Domain\obj\Debug\net6.0\TicketSale.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Domain\obj\Debug\net6.0\TicketSale.Domain.AssemblyInfoInputs.cache
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Domain\obj\Debug\net6.0\TicketSale.Domain.AssemblyInfo.cs
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Domain\obj\Debug\net6.0\TicketSale.Domain.csproj.CoreCompileInputs.cache
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Domain\bin\Debug\net6.0\TicketSale.Domain.deps.json
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Domain\bin\Debug\net6.0\TicketSale.Domain.dll
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Domain\bin\Debug\net6.0\TicketSale.Domain.pdb
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Domain\obj\Debug\net6.0\TicketSale.Domain.dll
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Domain\obj\Debug\net6.0\refint\TicketSale.Domain.dll
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Domain\obj\Debug\net6.0\TicketSale.Domain.pdb
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Domain\obj\Debug\net6.0\ref\TicketSale.Domain.dll

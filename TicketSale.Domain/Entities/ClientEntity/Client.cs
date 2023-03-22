@@ -9,5 +9,7 @@ namespace TicketSale.Domain.Entities.ClientEntity
         public string Surname { get; set; }
         public DateTime Birthday { get; set; }
         public Address Adress { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
     }
 }

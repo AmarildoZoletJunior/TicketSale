@@ -10,6 +10,6 @@ namespace TicketSale.Domain.VO
     public struct Address
     {
         public StateAcronym Acronym { get; set; }
-        public string InfoAddres { get; set; }
+        public string InfoAddress { get; set; }
     }
 }

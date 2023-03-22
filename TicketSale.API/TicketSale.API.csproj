@@ -4,18 +4,18 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>9df9dd5e-7819-4e78-bb0a-b983aa80bc89</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.15" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\TicketSale.Application\TicketSale.Application.csproj" />
     <ProjectReference Include="..\TicketSale.CrossCutting\TicketSale.CrossCutting.csproj" />
+    <ProjectReference Include="..\TicketSale.Domain\TicketSale.Domain.csproj" />
   </ItemGroup>
 
 </Project>
