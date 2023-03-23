@@ -1,0 +1,134 @@
+CREATE DATABASE TicketSale;
+
+
+
+USE TicketSale;
+
+CREATE TABLE Estado
+(
+	IdEstado INT IDENTITY(1,1) PRIMARY KEY,
+	SiglaUf VARCHAR(2) NOT NULL,
+	NomeUf VARCHAR(250) NOT NULL
+)
+
+
+CREATE TABLE Genero
+(
+	IdGenero INT IDENTITY(1,1) PRIMARY KEY,
+	TipoGenero VARCHAR(80) NOT NULL
+)
+
+
+CREATE TABLE StatusCompra
+(
+	IdStatusCompra INT IDENTITY(1,1) PRIMARY KEY,
+	TipoStatus VARCHAR(50) NOT NULL
+)
+
+
+CREATE TABLE Usuario
+(
+	IdUsuario INT IDENTITY(1,1) PRIMARY KEY,
+	Email VARCHAR(100) NOT NULL,
+	Senha VARCHAR(250) NOT NULL,
+	LastLogin DATETIME NOT NULL
+)
+
+
+CREATE TABLE Cidade
+(
+	IdCidade INT IDENTITY(1,1) PRIMARY KEY,
+	NomeCidade VARCHAR(100) NOT NULL,
+	IdEstado INT FOREIGN KEY REFERENCES Estado(IdEstado)
+)
+
+
+CREATE TABLE Evento
+(
+	IdEvento INT IDENTITY(1,1) PRIMARY KEY,
+	Endereco VARCHAR(250) NOT NULL,
+	DataInicio DATETIME NOT NULL,
+	DataFinal DATETIME NOT NULL,
+	RestricaoIdade INT NOT NULL,
+	IdCidade INT FOREIGN KEY REFERENCES Cidade(IdCidade)
+)
+
+
+
+CREATE TABLE LoteVenda
+(
+	IdLoteVenda INT IDENTITY(1,1) PRIMARY KEY,
+	QuantidadeIngresso INT NOT NULL,
+	Valor DECIMAL(10,2) NOT NULL,
+	IdEvento INT FOREIGN KEY REFERENCES Evento(IdEvento)
+)
+
+
+CREATE TABLE Cliente
+(
+	IdCliente INT IDENTITY(1,1) PRIMARY KEY,
+	Nome VARCHAR(250) NOT NULL,
+	Sobrenome VARCHAR(250) NOT NULL,
+	CPF VARCHAR(250) NOT NULL,
+	IdUsuario INT FOREIGN KEY REFERENCES Usuario(IdUsuario)
+)
+
+
+CREATE TABLE Artista
+(
+	IdArtista INT IDENTITY(1,1) PRIMARY KEY,
+	NomeArtista VARCHAR(100) NOT NULL,
+	IdGenero int FOREIGN KEY REFERENCES Genero(IdGenero)
+)
+
+
+CREATE TABLE Ingresso
+(
+	IdIngresso INT IDENTITY(1,1) PRIMARY KEY,
+	GuidHash VARCHAR(250) NOT NULL,
+	IdLoteVenda INT FOREIGN KEY REFERENCES LoteVenda(IdLoteVenda),
+	IdStatusCompra INT FOREIGN KEY REFERENCES StatusCompra(IdStatusCompra),
+	IdCliente INT FOREIGN KEY REFERENCES Cliente(IdCliente)
+)
+
+CREATE TABLE Genero_Has_Evento
+(
+	IdGenero INT FOREIGN KEY REFERENCES Genero(IdGenero),
+	IdEvento INT FOREIGN KEY REFERENCES Evento(IdEvento)
+)
+
+CREATE TABLE Artista_Has_Evento
+(
+	IdArtista INT FOREIGN KEY REFERENCES Artista(IdArtista),
+	IdEvento INT FOREIGN KEY REFERENCES Evento(IdEvento)
+)
+
+
+SELECT * FROM Artista
+SELECT * FROM Artista_Has_Evento
+SELECT * FROM Genero
+SELECT * FROM Genero_Has_Evento
+SELECT * FROM Usuario
+SELECT * FROM Cliente
+SELECT * FROM Cidade
+SELECT * FROM LoteVenda
+SELECT * FROM Ingresso
+SELECT * FROM StatusCompra
+SELECT * FROM Estado 
+SELECT * FROM Evento
+
+
+DROP TABLE Estado;
+DROP TABLE Genero;
+DROP TABLE StatusCompra;
+DROP TABLE Usuario;
+DROP TABLE Cidade;
+DROP TABLE Evento;
+DROP TABLE LoteVenda;
+DROP TABLE Cliente;
+DROP TABLE Artista;
+DROP TABLE Ingresso;
+DROP TABLE Genero_Has_Evento;
+DROP TABLE Artista_Has_Evento;
+
+

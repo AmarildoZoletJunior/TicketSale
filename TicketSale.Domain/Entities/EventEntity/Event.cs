@@ -1,17 +1,25 @@
-﻿using TicketSale.Domain.Entities.Base;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using TicketSale.Domain.Entities.ArtistHasEventEntity;
+using TicketSale.Domain.Entities.Base;
 using TicketSale.Domain.Entities.CategoryEntity;
-using TicketSale.Domain.VO;
+using TicketSale.Domain.Entities.CityEntity;
+using TicketSale.Domain.Entities.GenreHasEventEntity;
 
 namespace TicketSale.Domain.Entities.EventEntity
 {
     public class Event : BaseEntity
     {
-        public DateTime FinalDate { get; set; }
+        public string Address { get; set; }
         public DateTime InitialDate { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public Category Category { get; set; }
-        public int CategoryId { get; set; }
-        public Address Address { get; set; }
+        public DateTime FinalDate { get; set; }
+        public int AgeRestriction { get; set; }
+        public City City { get; set; }
+        public int CityId { get; set; }
+        public ICollection<ArtistHasEvent> Artirts { get; set; }
+        public ICollection<GenreHasEvent> Genres { get; set; }
     }
 }

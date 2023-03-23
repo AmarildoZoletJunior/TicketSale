@@ -21,7 +21,7 @@ namespace TicketSale.Application.TokenServices
             {
                 Subject = new System.Security.Claims.ClaimsIdentity(new Claim[]
                  {
-                     new Claim("ClientId", client.Id.ToString())
+                     new Claim(ClaimTypes.Name, client.Id.ToString())
                  }),
                 Expires = DateTime.UtcNow.AddHours(2),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
