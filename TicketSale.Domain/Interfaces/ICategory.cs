@@ -8,7 +8,7 @@ using TicketSale.Domain.Repositories.Base;
 
 namespace TicketSale.Domain.Interfaces
 {
-    public interface ICategory : IBaseRepository<Category>
+    public interface ICategory
     {
     }
 }

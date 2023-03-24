@@ -8,6 +8,7 @@ using TicketSale.Domain.Entities.Base;
 using TicketSale.Domain.Entities.CategoryEntity;
 using TicketSale.Domain.Entities.CityEntity;
 using TicketSale.Domain.Entities.GenreHasEventEntity;
+using TicketSale.Domain.Entities.TicketRegistrationEntity;
 
 namespace TicketSale.Domain.Entities.EventEntity
 {
@@ -21,5 +22,6 @@ namespace TicketSale.Domain.Entities.EventEntity
         public int CityId { get; set; }
         public ICollection<ArtistHasEvent> Artirts { get; set; }
         public ICollection<GenreHasEvent> Genres { get; set; }
+        public ICollection<TicketRegistration> TicketsRegistrations  { get; set; }
     }
 }
