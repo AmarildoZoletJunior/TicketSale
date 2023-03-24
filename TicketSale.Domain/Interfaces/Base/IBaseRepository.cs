@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TicketSale.Domain.Entities.Base;
 
-namespace TicketSale.Domain.Repositories.Base
+namespace TicketSale.Domain.Interfaces.Base
 {
     public interface IBaseRepository<T> where T : BaseEntity
     {

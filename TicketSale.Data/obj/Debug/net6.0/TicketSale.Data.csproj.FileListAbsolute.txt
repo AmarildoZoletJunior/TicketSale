@@ -7,7 +7,9 @@ C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\Ticket
 C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Data\bin\Debug\net6.0\TicketSale.Data.runtimeconfig.json
 C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Data\bin\Debug\net6.0\TicketSale.Data.dll
 C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Data\bin\Debug\net6.0\TicketSale.Data.pdb
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Data\bin\Debug\net6.0\TicketSale.CrossCutting.dll
 C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Data\bin\Debug\net6.0\TicketSale.Domain.dll
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Data\bin\Debug\net6.0\TicketSale.CrossCutting.pdb
 C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Data\bin\Debug\net6.0\TicketSale.Domain.pdb
 C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Data\obj\Debug\net6.0\TicketSale.Data.csproj.CopyComplete
 C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Data\obj\Debug\net6.0\TicketSale.Data.dll

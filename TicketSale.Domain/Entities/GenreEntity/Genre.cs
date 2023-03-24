@@ -3,7 +3,7 @@ using TicketSale.Domain.Entities.ArtistHasGenreEntity;
 using TicketSale.Domain.Entities.Base;
 using TicketSale.Domain.Entities.GenreHasEventEntity;
 
-namespace TicketSale.Domain.Entities.CategoryEntity
+namespace TicketSale.Domain.Entities.GenreEntity
 {
     public class Genre : BaseEntity
     {

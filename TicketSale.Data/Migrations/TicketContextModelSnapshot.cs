@@ -54,7 +54,7 @@ namespace TicketSale.Data.Migrations
 
                     b.HasIndex("ArtistId");
 
-                    b.ToTable("ArtistHasEvent");
+                    b.ToTable("ArtistsHasEvents");
                 });
 
             modelBuilder.Entity("TicketSale.Domain.Entities.ArtistHasGenreEntity.ArtistHasGenre", b =>
@@ -69,7 +69,7 @@ namespace TicketSale.Data.Migrations
 
                     b.HasIndex("ArtistId");
 
-                    b.ToTable("ArtistHasGenre");
+                    b.ToTable("ArtistsHasGenres");
                 });
 
             modelBuilder.Entity("TicketSale.Domain.Entities.CategoryEntity.Genre", b =>
@@ -194,7 +194,7 @@ namespace TicketSale.Data.Migrations
 
                     b.HasIndex("GenreId");
 
-                    b.ToTable("GenreHasEvent");
+                    b.ToTable("GenreHasEvents");
                 });
 
             modelBuilder.Entity("TicketSale.Domain.Entities.PaymentStatusEntity.PaymentStatus", b =>
@@ -387,22 +387,26 @@ namespace TicketSale.Data.Migrations
                                 .HasColumnType("int");
 
                             b1.Property<DateTime>("Birthday")
-                                .HasColumnType("datetime2");
+                                .HasColumnType("datetime2")
+                                .HasColumnName("Birthday");
 
                             b1.Property<string>("CPF")
                                 .IsRequired()
                                 .HasMaxLength(14)
-                                .HasColumnType("nvarchar(14)");
+                                .HasColumnType("nvarchar(14)")
+                                .HasColumnName("CPF");
 
                             b1.Property<string>("Name")
                                 .IsRequired()
                                 .HasMaxLength(50)
-                                .HasColumnType("nvarchar(50)");
+                                .HasColumnType("nvarchar(50)")
+                                .HasColumnName("Name");
 
                             b1.Property<string>("Surname")
                                 .IsRequired()
                                 .HasMaxLength(50)
-                                .HasColumnType("nvarchar(50)");
+                                .HasColumnType("nvarchar(50)")
+                                .HasColumnName("Surname");
 
                             b1.HasKey("ClientId");
 

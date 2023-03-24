@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TicketSale.CrossCutting.DTOs.UserDTOs.Response;
 using TicketSale.Domain.Entities.UserEntity;
 
 namespace TicketSale.Data.Mapping

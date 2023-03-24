@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TicketSale.CrossCutting\TicketSale.CrossCutting.csproj" />
     <ProjectReference Include="..\TicketSale.Domain\TicketSale.Domain.csproj" />
   </ItemGroup>
 

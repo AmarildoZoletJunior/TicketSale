@@ -8,10 +8,11 @@ using TicketSale.Data.Mapping;
 using TicketSale.Data.Mapping.RelationshipMap;
 using TicketSale.Domain.Entities.ArtistEntity;
 using TicketSale.Domain.Entities.ArtistHasEventEntity;
-using TicketSale.Domain.Entities.CategoryEntity;
+using TicketSale.Domain.Entities.ArtistHasGenreEntity;
 using TicketSale.Domain.Entities.CityEntity;
 using TicketSale.Domain.Entities.ClientEntity;
 using TicketSale.Domain.Entities.EventEntity;
+using TicketSale.Domain.Entities.GenreEntity;
 using TicketSale.Domain.Entities.GenreHasEventEntity;
 using TicketSale.Domain.Entities.PaymentStatusEntity;
 using TicketSale.Domain.Entities.StateEntity;
@@ -25,8 +26,6 @@ namespace TicketSale.Data.Context
     {
         public TicketContext(DbContextOptions<TicketContext> options) : base(options) { }
 
-
-
         public DbSet<Artist> Artirts { get; set; }
         public DbSet<City> Cities { get; set; }
         public DbSet<Client> Clients { get; set; }
@@ -37,6 +36,9 @@ namespace TicketSale.Data.Context
         public DbSet<User> Users { get; set; }
         public DbSet<State> States { get; set; }
         public DbSet<TicketRegistration> TicketRegistrations { get; set; }
+        public DbSet<GenreHasEvent> GenreHasEvents { get; set; }
+        public DbSet<ArtistHasEvent> ArtistsHasEvents { get; set; }
+        public DbSet<ArtistHasGenre> ArtistsHasGenres { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

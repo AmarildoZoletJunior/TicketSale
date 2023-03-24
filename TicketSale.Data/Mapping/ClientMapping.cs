@@ -17,10 +17,10 @@ namespace TicketSale.Data.Mapping
             builder.HasKey(property => property.Id);
             builder.Property(x => x.Id).ValueGeneratedOnAdd().IsRequired();
 
-            builder.OwnsOne(x => x.PersonInfo).Property(x => x.Name).IsRequired().HasMaxLength(50);
-            builder.OwnsOne(x => x.PersonInfo).Property(x => x.Surname).IsRequired().HasMaxLength(50);
-            builder.OwnsOne(x => x.PersonInfo).Property(x => x.Birthday).IsRequired();
-            builder.OwnsOne(x => x.PersonInfo).Property(x => x.CPF).IsRequired().HasMaxLength(14);
+            builder.OwnsOne(x => x.PersonInfo).Property(x => x.Name).IsRequired().HasMaxLength(50).HasColumnName("Name");
+            builder.OwnsOne(x => x.PersonInfo).Property(x => x.Surname).IsRequired().HasMaxLength(50).HasColumnName("Surname");
+            builder.OwnsOne(x => x.PersonInfo).Property(x => x.Birthday).IsRequired().HasColumnName("Birthday");
+            builder.OwnsOne(x => x.PersonInfo).Property(x => x.CPF).IsRequired().HasMaxLength(14).HasColumnName("CPF");
 
 
             builder.Property(x => x.AdressInfo).IsRequired();
