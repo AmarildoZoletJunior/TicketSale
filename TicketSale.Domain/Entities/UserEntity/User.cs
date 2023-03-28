@@ -13,6 +13,7 @@ namespace TicketSale.Domain.Entities.UserEntity
         public string Email { get; set; }
         public string Password { get; set; }
         public Client Client { get; set; }
+        public Client ClientId { get; set; }
 
     }
 }
