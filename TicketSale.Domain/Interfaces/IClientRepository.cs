@@ -3,7 +3,8 @@ using TicketSale.Domain.Interfaces.Base;
 
 namespace TicketSale.Domain.Interfaces
 {
-    public interface IClient : IBaseRepository<Client>
+    public interface IClientRepository : IBaseRepository<Client>
     {
+        Task<Client> Update(Client client);
     }
 }

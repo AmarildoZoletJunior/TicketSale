@@ -1,9 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TicketSale.Data.Mapping;
 using TicketSale.Data.Mapping.RelationshipMap;
 using TicketSale.Domain.Entities.ArtistEntity;

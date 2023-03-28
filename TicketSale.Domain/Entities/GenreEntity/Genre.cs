@@ -1,5 +1,4 @@
-﻿using TicketSale.Domain.Entities.ArtistHasEventEntity;
-using TicketSale.Domain.Entities.ArtistHasGenreEntity;
+﻿using TicketSale.Domain.Entities.ArtistHasGenreEntity;
 using TicketSale.Domain.Entities.Base;
 using TicketSale.Domain.Entities.GenreHasEventEntity;
 

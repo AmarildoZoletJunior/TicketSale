@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TicketSale.Application.DTOs.UserDTOs.Response
+﻿namespace TicketSale.Application.DTOs.UserDTOs.Response
 {
     public class UserResponseWithId
     {

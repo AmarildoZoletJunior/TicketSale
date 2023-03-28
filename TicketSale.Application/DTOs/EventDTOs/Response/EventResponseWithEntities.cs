@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TicketSale.Application.DTOs.CityDTOs.Response;
+﻿using TicketSale.Application.DTOs.CityDTOs.Response;
 
 namespace TicketSale.Application.DTOs.EventDTOs.Response
 {
