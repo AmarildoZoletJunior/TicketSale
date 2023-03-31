@@ -1,4 +1,4 @@
-﻿namespace TicketSale.Application.DTOs.ArtistDTOs
+﻿namespace TicketSale.Application.DTOs.ArtistDTOs.Response
 {
     public class ArtistResponse
     {

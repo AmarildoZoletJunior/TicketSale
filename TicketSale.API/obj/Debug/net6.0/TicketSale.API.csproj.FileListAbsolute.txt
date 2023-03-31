@@ -96,3 +96,7 @@ C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\Ticket
 C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.API\obj\Debug\net6.0\TicketSale.API.pdb
 C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.API\obj\Debug\net6.0\TicketSale.API.genruntimeconfig.cache
 C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.API\obj\Debug\net6.0\ref\TicketSale.API.dll
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.API\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.API\bin\Debug\net6.0\Microsoft.Practices.ServiceLocation.dll
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.API\bin\Debug\net6.0\XAct.Core.PCL.dll

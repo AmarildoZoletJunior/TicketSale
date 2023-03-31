@@ -10,3 +10,6 @@ C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\Ticket
 C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Domain\obj\Debug\net6.0\refint\TicketSale.Domain.dll
 C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Domain\obj\Debug\net6.0\TicketSale.Domain.pdb
 C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Domain\obj\Debug\net6.0\ref\TicketSale.Domain.dll
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Domain\bin\Debug\net6.0\TicketSale.CrossCutting.dll
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Domain\bin\Debug\net6.0\TicketSale.CrossCutting.pdb
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Domain\obj\Debug\net6.0\TicketSale.Domain.csproj.CopyComplete

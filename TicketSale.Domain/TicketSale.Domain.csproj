@@ -16,4 +16,8 @@
     <Folder Include="Enum\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TicketSale.CrossCutting\TicketSale.CrossCutting.csproj" />
+  </ItemGroup>
+
 </Project>

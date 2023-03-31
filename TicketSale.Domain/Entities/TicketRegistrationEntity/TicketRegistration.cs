@@ -10,7 +10,6 @@ namespace TicketSale.Domain.Entities.TicketRegistrationEntity
         public decimal Value { get; set; }
         public Event Event { get; set; }
         public int EventId { get; set; }
-
         public ICollection<Ticket> Tickets { get; set; }
     }
 }

@@ -1,6 +1,4 @@
-﻿
-
-namespace TicketSale.Application.DTOs.CityDTOs.Response
+﻿namespace TicketSale.Application.DTOs.CityDTOs.Response
 {
     public class CityResponseWithId
     {

@@ -1,4 +1,4 @@
-﻿using TicketSale.Application.DTOs.ArtistDTOs;
+﻿using TicketSale.Application.DTOs.ArtistDTOs.Response;
 using TicketSale.Application.DTOs.GenreDTOs.Response;
 
 namespace TicketSale.Application.DTOs.ArtistHasGenreDTOs.Response

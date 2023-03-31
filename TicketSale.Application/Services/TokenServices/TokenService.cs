@@ -12,7 +12,7 @@ namespace TicketSale.Application.Services.TokenServices
 
         public static object GenerateToken(Client client, IConfiguration _configuration)
         {
-            var key = Encoding.ASCII.GetBytes(_configuration["TokenJwtPassword"]);
+            var key = Encoding.ASCII.GetBytes("testedechaveparagerartokenjwt");
             var tokenConfig = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new Claim[]

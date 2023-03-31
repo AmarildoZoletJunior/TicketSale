@@ -20,4 +20,20 @@
     <ProjectReference Include="..\TicketSale.Domain\TicketSale.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DTOs\ArtistDTOs\Request\" />
+    <Folder Include="DTOs\ArtistHasEventDTOs\Request\" />
+    <Folder Include="DTOs\ArtistHasGenreDTOs\Request\" />
+    <Folder Include="DTOs\CityDTOs\Request\" />
+    <Folder Include="DTOs\ClientDTOs\Request\" />
+    <Folder Include="DTOs\EventDTOs\Request\" />
+    <Folder Include="DTOs\GenreDTOs\Request\" />
+    <Folder Include="DTOs\GenreHasEventDTOs\Request\" />
+    <Folder Include="DTOs\PaymentStatusDTOs\Request\" />
+    <Folder Include="DTOs\StateDTOs\Request\" />
+    <Folder Include="DTOs\TicketDTOs\Request\" />
+    <Folder Include="DTOs\TicketRegistrationDTOs\Request\" />
+    <Folder Include="DTOs\UserDTOs\Request\" />
+  </ItemGroup>
+
 </Project>

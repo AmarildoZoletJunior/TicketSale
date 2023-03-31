@@ -1,9 +1,12 @@
 ﻿using AutoMapper;
-using TicketSale.Application.DTOs.ArtistDTOs;
+using System.Drawing;
+using System.Globalization;
+using TicketSale.Application.DTOs.ArtistDTOs.Response;
 using TicketSale.Application.DTOs.ArtistHasEventDTOs.Response;
 using TicketSale.Application.DTOs.ArtistHasGenreDTOs.Response;
 using TicketSale.Application.DTOs.CityDTOs.Response;
 using TicketSale.Application.DTOs.ClientDTOs.Response;
+using TicketSale.Application.DTOs.CurrencyDTOs;
 using TicketSale.Application.DTOs.EventDTOs.Response;
 using TicketSale.Application.DTOs.GenreDTOs.Response;
 using TicketSale.Application.DTOs.GenreHasEventDTOs.Response;
@@ -12,11 +15,13 @@ using TicketSale.Application.DTOs.StateDTOs.Response;
 using TicketSale.Application.DTOs.TicketDTOs.Response;
 using TicketSale.Application.DTOs.TicketRegistrationDTOs.Response;
 using TicketSale.Application.DTOs.UserDTOs.Response;
+using TicketSale.CrossCutting.Utils;
 using TicketSale.Domain.Entities.ArtistEntity;
 using TicketSale.Domain.Entities.ArtistHasEventEntity;
 using TicketSale.Domain.Entities.ArtistHasGenreEntity;
 using TicketSale.Domain.Entities.CityEntity;
 using TicketSale.Domain.Entities.ClientEntity;
+using TicketSale.Domain.Entities.CurrencyEntity;
 using TicketSale.Domain.Entities.EventEntity;
 using TicketSale.Domain.Entities.GenreEntity;
 using TicketSale.Domain.Entities.GenreHasEventEntity;
@@ -34,14 +39,16 @@ namespace TicketSale.Application.Mapper
         {
             CreateMap<Artist, ArtistResponse>();
 
-            CreateMap<City,CityResponseWithEntities>();
+            CreateMap<City, CityResponseWithEntities>();
             CreateMap<City, CityResponseWithId>();
 
 
 
-            CreateMap<Client, ClientResponseWithEntities>().ForMember(fln => fln.FullName, map => map.MapFrom(src => $"{src.PersonInfo.Name} {src.PersonInfo.Surname}"));
+            CreateMap<Client, ClientResponseWithEntities>().ForMember(fln => fln.FullName, map => map.MapFrom(src => $"{src.PersonInfo.Name} {src.PersonInfo.Surname}"))
+                .ForMember(brthd => brthd.Birthday, map => map.MapFrom(src => src.PersonInfo.Birthday));
 
-            CreateMap<Client, ClientResponseWithId>().ForMember(fln => fln.FullName, map => map.MapFrom(src => $"{src.PersonInfo.Name} {src.PersonInfo.Surname}"));
+            CreateMap<Client, ClientResponseWithId>().ForMember(fln => fln.FullName, map => map.MapFrom(src => $"{src.PersonInfo.Name} {src.PersonInfo.Surname}"))
+                .ForMember(brthd => brthd.Birthday, map => map.MapFrom(src => src.PersonInfo.Birthday));
 
             CreateMap<Event, EventResponseWithEntities>();
             CreateMap<Event, EventResponseWithId>();
@@ -70,6 +77,11 @@ namespace TicketSale.Application.Mapper
 
             CreateMap<ArtistHasGenre, ArHasGeWithId>();
             CreateMap<ArtistHasGenre, ArHasGeWithEntities>();
+
+            CreateMap<CurrencyJson, CurrencyResponse>().ForMember(code => code.Code, map => map.MapFrom(src => src.code))
+                .ForMember(code => code.High, map => map.MapFrom(src => ConvertToDecimal.ConvertDecimal(src.high)))
+                .ForMember(code => code.Low, map => map.MapFrom(src => ConvertToDecimal.ConvertDecimal(src.low)))
+                .ForMember(code => code.CodeIn, map => map.MapFrom(src => src.codein));
         }
     }
 }

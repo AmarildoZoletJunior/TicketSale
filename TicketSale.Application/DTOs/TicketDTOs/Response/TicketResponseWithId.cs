@@ -1,5 +1,4 @@
-﻿
-namespace TicketSale.Application.DTOs.TicketDTOs.Response
+﻿namespace TicketSale.Application.DTOs.TicketDTOs.Response
 {
     public class TicketResponseWithId
     {

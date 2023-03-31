@@ -1,8 +1,11 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
+using TicketSale.API.Injections;
+using TicketSale.Application.Mapper;
 using TicketSale.CrossCutting.Helper;
 using TicketSale.Data.Context;
 
@@ -13,9 +16,21 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+var configuration = new MapperConfiguration(x => x.AddProfile(new MapToDTO()));
+IMapper mapper = configuration.CreateMapper();
+builder.Services.AddSingleton(mapper);
+
+#region DependencyInjection
+Injection.RegisterInjections(builder.Services);
+#endregion
+
+#region DbConfiguration
 builder.Services.AddDbContext<TicketContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionTicket")));
+#endregion
+
 builder.Services.AddSwaggerGen(c =>
 {
+    #region SecurityDefinition
     c.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
     {
         Name = "Authorization",
@@ -42,12 +57,12 @@ builder.Services.AddSwaggerGen(c =>
         new List<string>()
         }
     });
-
+    #endregion
 });
 
+#region JWTConfiguration
 
-
-var key = Encoding.ASCII.GetBytes(builder.Configuration.GetValue<string>("TokenJwtPassword"));
+var key = Encoding.ASCII.GetBytes("testedechaveparagerartokenjwt");
 
 
 builder.Services.AddAuthentication(x =>
@@ -66,6 +81,8 @@ builder.Services.AddAuthentication(x =>
         ValidateAudience = false
     };
 });
+
+#endregion
 
 var app = builder.Build();
 

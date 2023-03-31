@@ -6,7 +6,6 @@ namespace TicketSale.Domain.Interfaces
 {
     public interface IArtistRepository : IBaseRepository<Artist>
     {
-        Task<Artist> Update(Artist artist);
-        Task<ArtistHasGenre> AddGenreForArtist(ArtistHasGenre artistHasGenre);
+        Task<int> Update(Artist artist);
     }
 }
