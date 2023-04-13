@@ -1,11 +1,11 @@
-﻿using TicketSale.Domain.Entities.ArtistHasEventEntity;
+﻿using TicketSale.Domain.Entities.Relationship.ArtistHasEventEntity;
 using TicketSale.Domain.Interfaces.Base;
 
 namespace TicketSale.Domain.Interfaces.Relationship
 {
-    public interface IArtistHasEventRepository : IBaseRepository<ArtistHasEvent>
+    public interface IArtistHasEventRepository
     {
-        Task<int> Delete(int artistId, int eventId);
-        Task<int> Update(int artistId, int eventId);
+        public void Delete(int artistId, int eventId);
+        public void Create(ArtistHasEvent artist);
     }
 }

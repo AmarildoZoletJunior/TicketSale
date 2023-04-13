@@ -19,13 +19,11 @@ namespace TicketSale.Data.Mapping
 
 
             builder.Property(x => x.AdressInfo).IsRequired();
-            builder.Property(x => x.UserId).IsRequired();
             builder.Property(x => x.CityId).IsRequired();
             builder.Property(x => x.CreatedAt).IsRequired();
 
 
             builder.HasOne(x => x.City).WithMany(x => x.Clients).HasForeignKey(x => x.CityId);
-            builder.HasOne(x => x.User).WithOne(x => x.Client).HasForeignKey<Client>(x => x.UserId);
         }
     }
 }

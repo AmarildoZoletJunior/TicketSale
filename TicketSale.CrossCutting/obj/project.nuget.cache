@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NZXmFhIQG1kWWoBlnl71Wv+bRp9FOb/plt8zptE+DDeg2+ZZ6VoO9Fr1vUga+eGEVE72F5OY5oxE7NnNWIJTGw==",
+  "dgSpecHash": "+ukmRFFwB2nyF6AyTocI/RoQ18u6GqtZpIitBw8jllHc4lg/7jR6CELrOSoK18CCtVxU1wtaygZ2jOmm+2+HFw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\TicketSale\\TicketSale\\TicketSale.CrossCutting\\TicketSale.CrossCutting.csproj",
+  "projectFilePath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.CrossCutting\\TicketSale.CrossCutting.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\amarildojunior_frwk\\.nuget\\packages\\commonservicelocator\\1.3.0\\commonservicelocator.1.3.0.nupkg.sha512",
     "C:\\Users\\amarildojunior_frwk\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",

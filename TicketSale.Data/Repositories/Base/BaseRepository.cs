@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TicketSale.CrossCutting.Paged;
-using TicketSale.Data.Context;
 using TicketSale.Domain.Entities.Base;
 using TicketSale.Domain.Interfaces.Base;
 using XAct;
@@ -20,11 +19,9 @@ namespace TicketSale.Data.Repositories.Base
         {
             _ticketContext = ticket;
         }
-        public Task<int> Create(T entity)
+        public async Task Create(T entity)
         {
-            _ticketContext.Add(entity);
-            var rows = _ticketContext.SaveChangesAsync();
-            return rows;
+            await _ticketContext.Set<T>().AddAsync(entity);
         }
 
         public async Task<T> FindByIdAsync(int id)

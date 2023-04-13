@@ -5,6 +5,6 @@ namespace TicketSale.Domain.Interfaces
 {
     public interface IPaymentStatus : IBaseRepository<PaymentStatus>
     {
-        Task<PaymentStatus> Update(PaymentStatus paymentStatus);
+        public void Update(PaymentStatus paymentStatus);
     }
 }

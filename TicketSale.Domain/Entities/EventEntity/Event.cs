@@ -1,7 +1,7 @@
-﻿using TicketSale.Domain.Entities.ArtistHasEventEntity;
-using TicketSale.Domain.Entities.Base;
+﻿using TicketSale.Domain.Entities.Base;
 using TicketSale.Domain.Entities.CityEntity;
-using TicketSale.Domain.Entities.GenreHasEventEntity;
+using TicketSale.Domain.Entities.Relationship.ArtistHasEventEntity;
+using TicketSale.Domain.Entities.Relationship.GenreHasEventEntity;
 using TicketSale.Domain.Entities.TicketRegistrationEntity;
 
 namespace TicketSale.Domain.Entities.EventEntity

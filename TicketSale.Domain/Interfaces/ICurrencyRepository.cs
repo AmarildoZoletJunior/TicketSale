@@ -10,6 +10,6 @@ namespace TicketSale.Domain.Interfaces
 {
     public interface ICurrencyRepository
     {
-        Task<Currency> GetCurrency(int current);
+        Task<List<Currency>> GetCurrency(CurrentType current);
     }
 }

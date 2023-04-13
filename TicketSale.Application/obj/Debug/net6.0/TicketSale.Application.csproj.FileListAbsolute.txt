@@ -15,3 +15,5 @@ C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\Ticket
 C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Application\obj\Debug\net6.0\ref\TicketSale.Application.dll
 C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Application\bin\Debug\net6.0\TicketSale.CrossCutting.dll
 C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Application\bin\Debug\net6.0\TicketSale.CrossCutting.pdb
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Application\bin\Debug\net6.0\TicketSale.Data.dll
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\TicketSale\TicketSale\TicketSale.Application\bin\Debug\net6.0\TicketSale.Data.pdb

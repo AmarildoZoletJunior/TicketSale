@@ -9,23 +9,21 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
-    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
-    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.27.0" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.27.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.5.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="7.0.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.28.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.28.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TicketSale.Data\TicketSale.Data.csproj" />
     <ProjectReference Include="..\TicketSale.Domain\TicketSale.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="DTOs\ArtistDTOs\Request\" />
-    <Folder Include="DTOs\ArtistHasEventDTOs\Request\" />
-    <Folder Include="DTOs\ArtistHasGenreDTOs\Request\" />
-    <Folder Include="DTOs\CityDTOs\Request\" />
-    <Folder Include="DTOs\ClientDTOs\Request\" />
     <Folder Include="DTOs\EventDTOs\Request\" />
     <Folder Include="DTOs\GenreDTOs\Request\" />
     <Folder Include="DTOs\GenreHasEventDTOs\Request\" />
@@ -33,7 +31,6 @@
     <Folder Include="DTOs\StateDTOs\Request\" />
     <Folder Include="DTOs\TicketDTOs\Request\" />
     <Folder Include="DTOs\TicketRegistrationDTOs\Request\" />
-    <Folder Include="DTOs\UserDTOs\Request\" />
   </ItemGroup>
 
 </Project>

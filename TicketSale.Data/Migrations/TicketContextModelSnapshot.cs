@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using TicketSale.Data.Context;
+using TicketSale.Data;
 
 #nullable disable
 
@@ -42,56 +42,6 @@ namespace TicketSale.Data.Migrations
                     b.ToTable("Artirts");
                 });
 
-            modelBuilder.Entity("TicketSale.Domain.Entities.ArtistHasEventEntity.ArtistHasEvent", b =>
-                {
-                    b.Property<int>("EventId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ArtistId")
-                        .HasColumnType("int");
-
-                    b.HasKey("EventId", "ArtistId");
-
-                    b.HasIndex("ArtistId");
-
-                    b.ToTable("ArtistsHasEvents");
-                });
-
-            modelBuilder.Entity("TicketSale.Domain.Entities.ArtistHasGenreEntity.ArtistHasGenre", b =>
-                {
-                    b.Property<int>("GenreId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ArtistId")
-                        .HasColumnType("int");
-
-                    b.HasKey("GenreId", "ArtistId");
-
-                    b.HasIndex("ArtistId");
-
-                    b.ToTable("ArtistsHasGenres");
-                });
-
-            modelBuilder.Entity("TicketSale.Domain.Entities.CategoryEntity.Genre", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("TypeGenre")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Genres");
-                });
-
             modelBuilder.Entity("TicketSale.Domain.Entities.CityEntity.City", b =>
                 {
                     b.Property<int>("Id")
@@ -125,6 +75,9 @@ namespace TicketSale.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<bool>("Active")
+                        .HasColumnType("bit");
+
                     b.Property<string>("AdressInfo")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -135,15 +88,17 @@ namespace TicketSale.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CityId");
-
-                    b.HasIndex("UserId")
-                        .IsUnique();
 
                     b.ToTable("Clients");
                 });
@@ -182,19 +137,24 @@ namespace TicketSale.Data.Migrations
                     b.ToTable("Events");
                 });
 
-            modelBuilder.Entity("TicketSale.Domain.Entities.GenreHasEventEntity.GenreHasEvent", b =>
+            modelBuilder.Entity("TicketSale.Domain.Entities.GenreEntity.Genre", b =>
                 {
-                    b.Property<int>("EventId")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("GenreId")
-                        .HasColumnType("int");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.HasKey("EventId", "GenreId");
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
 
-                    b.HasIndex("GenreId");
+                    b.Property<string>("TypeGenre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.ToTable("GenreHasEvents");
+                    b.HasKey("Id");
+
+                    b.ToTable("Genres");
                 });
 
             modelBuilder.Entity("TicketSale.Domain.Entities.PaymentStatusEntity.PaymentStatus", b =>
@@ -215,6 +175,51 @@ namespace TicketSale.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("PaymentStatuses");
+                });
+
+            modelBuilder.Entity("TicketSale.Domain.Entities.Relationship.ArtistHasEventEntity.ArtistHasEvent", b =>
+                {
+                    b.Property<int>("EventId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ArtistId")
+                        .HasColumnType("int");
+
+                    b.HasKey("EventId", "ArtistId");
+
+                    b.HasIndex("ArtistId");
+
+                    b.ToTable("ArtistsHasEvents");
+                });
+
+            modelBuilder.Entity("TicketSale.Domain.Entities.Relationship.ArtistHasGenreEntity.ArtistHasGenre", b =>
+                {
+                    b.Property<int>("GenreId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ArtistId")
+                        .HasColumnType("int");
+
+                    b.HasKey("GenreId", "ArtistId");
+
+                    b.HasIndex("ArtistId");
+
+                    b.ToTable("ArtistsHasGenres");
+                });
+
+            modelBuilder.Entity("TicketSale.Domain.Entities.Relationship.GenreHasEventEntity.GenreHasEvent", b =>
+                {
+                    b.Property<int>("EventId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("GenreId")
+                        .HasColumnType("int");
+
+                    b.HasKey("EventId", "GenreId");
+
+                    b.HasIndex("GenreId");
+
+                    b.ToTable("GenreHasEvents");
                 });
 
             modelBuilder.Entity("TicketSale.Domain.Entities.StateEntity.State", b =>
@@ -258,6 +263,9 @@ namespace TicketSale.Data.Migrations
                     b.Property<int>("PaymentStatusId")
                         .HasColumnType("int");
 
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
                     b.HasKey("ClientId", "TicketRegistrationId");
 
                     b.HasIndex("PaymentStatusId");
@@ -294,68 +302,6 @@ namespace TicketSale.Data.Migrations
                     b.ToTable("TicketRegistrations");
                 });
 
-            modelBuilder.Entity("TicketSale.Domain.Entities.UserEntity.User", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("TicketSale.Domain.Entities.ArtistHasEventEntity.ArtistHasEvent", b =>
-                {
-                    b.HasOne("TicketSale.Domain.Entities.ArtistEntity.Artist", "Artist")
-                        .WithMany("Events")
-                        .HasForeignKey("ArtistId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TicketSale.Domain.Entities.EventEntity.Event", "Event")
-                        .WithMany("Artirts")
-                        .HasForeignKey("EventId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Artist");
-
-                    b.Navigation("Event");
-                });
-
-            modelBuilder.Entity("TicketSale.Domain.Entities.ArtistHasGenreEntity.ArtistHasGenre", b =>
-                {
-                    b.HasOne("TicketSale.Domain.Entities.ArtistEntity.Artist", "Artist")
-                        .WithMany("Genres")
-                        .HasForeignKey("ArtistId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TicketSale.Domain.Entities.CategoryEntity.Genre", "Genre")
-                        .WithMany("Artirts")
-                        .HasForeignKey("GenreId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Artist");
-
-                    b.Navigation("Genre");
-                });
-
             modelBuilder.Entity("TicketSale.Domain.Entities.CityEntity.City", b =>
                 {
                     b.HasOne("TicketSale.Domain.Entities.StateEntity.State", "State")
@@ -372,12 +318,6 @@ namespace TicketSale.Data.Migrations
                     b.HasOne("TicketSale.Domain.Entities.CityEntity.City", "City")
                         .WithMany("Clients")
                         .HasForeignKey("CityId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TicketSale.Domain.Entities.UserEntity.User", "User")
-                        .WithOne("Client")
-                        .HasForeignKey("TicketSale.Domain.Entities.ClientEntity.Client", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -420,8 +360,6 @@ namespace TicketSale.Data.Migrations
 
                     b.Navigation("PersonInfo")
                         .IsRequired();
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("TicketSale.Domain.Entities.EventEntity.Event", b =>
@@ -435,7 +373,45 @@ namespace TicketSale.Data.Migrations
                     b.Navigation("City");
                 });
 
-            modelBuilder.Entity("TicketSale.Domain.Entities.GenreHasEventEntity.GenreHasEvent", b =>
+            modelBuilder.Entity("TicketSale.Domain.Entities.Relationship.ArtistHasEventEntity.ArtistHasEvent", b =>
+                {
+                    b.HasOne("TicketSale.Domain.Entities.ArtistEntity.Artist", "Artist")
+                        .WithMany("Events")
+                        .HasForeignKey("ArtistId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TicketSale.Domain.Entities.EventEntity.Event", "Event")
+                        .WithMany("Artirts")
+                        .HasForeignKey("EventId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Artist");
+
+                    b.Navigation("Event");
+                });
+
+            modelBuilder.Entity("TicketSale.Domain.Entities.Relationship.ArtistHasGenreEntity.ArtistHasGenre", b =>
+                {
+                    b.HasOne("TicketSale.Domain.Entities.ArtistEntity.Artist", "Artist")
+                        .WithMany("Genres")
+                        .HasForeignKey("ArtistId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TicketSale.Domain.Entities.GenreEntity.Genre", "Genre")
+                        .WithMany("Artirts")
+                        .HasForeignKey("GenreId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Artist");
+
+                    b.Navigation("Genre");
+                });
+
+            modelBuilder.Entity("TicketSale.Domain.Entities.Relationship.GenreHasEventEntity.GenreHasEvent", b =>
                 {
                     b.HasOne("TicketSale.Domain.Entities.EventEntity.Event", "Event")
                         .WithMany("Genres")
@@ -443,7 +419,7 @@ namespace TicketSale.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("TicketSale.Domain.Entities.CategoryEntity.Genre", "Genre")
+                    b.HasOne("TicketSale.Domain.Entities.GenreEntity.Genre", "Genre")
                         .WithMany("Events")
                         .HasForeignKey("GenreId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -499,13 +475,6 @@ namespace TicketSale.Data.Migrations
                     b.Navigation("Genres");
                 });
 
-            modelBuilder.Entity("TicketSale.Domain.Entities.CategoryEntity.Genre", b =>
-                {
-                    b.Navigation("Artirts");
-
-                    b.Navigation("Events");
-                });
-
             modelBuilder.Entity("TicketSale.Domain.Entities.CityEntity.City", b =>
                 {
                     b.Navigation("Clients");
@@ -527,6 +496,13 @@ namespace TicketSale.Data.Migrations
                     b.Navigation("TicketsRegistrations");
                 });
 
+            modelBuilder.Entity("TicketSale.Domain.Entities.GenreEntity.Genre", b =>
+                {
+                    b.Navigation("Artirts");
+
+                    b.Navigation("Events");
+                });
+
             modelBuilder.Entity("TicketSale.Domain.Entities.PaymentStatusEntity.PaymentStatus", b =>
                 {
                     b.Navigation("Tickets");
@@ -540,12 +516,6 @@ namespace TicketSale.Data.Migrations
             modelBuilder.Entity("TicketSale.Domain.Entities.TicketRegistrationEntity.TicketRegistration", b =>
                 {
                     b.Navigation("Tickets");
-                });
-
-            modelBuilder.Entity("TicketSale.Domain.Entities.UserEntity.User", b =>
-                {
-                    b.Navigation("Client")
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

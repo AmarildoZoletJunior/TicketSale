@@ -5,6 +5,7 @@ namespace TicketSale.Domain.Interfaces
 {
     public interface IClientRepository : IBaseRepository<Client>
     {
-        Task<Client> Update(Client client);
+        public void Update(Client client);
+        public Task<Client> GetClientAuthAsync(Client client);
     }
 }

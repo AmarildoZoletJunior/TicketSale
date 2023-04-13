@@ -8,11 +8,6 @@ namespace TicketSale.Domain.Entities.CurrencyEntity
 {
     public class Currency
     {
-        public CurrencyJson USDBRL { get; set; }
-    }
-
-    public class CurrencyJson
-    {
         public string code { get; set; }
         public string codein { get; set; }
         public string name { get; set; }

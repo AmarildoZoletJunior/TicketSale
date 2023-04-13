@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RTUXBwIWMWRmlrv2XxqI/7vPwZ4PaVY8pmtGnqEiZ2PYG3TTcgbNTx5m9CYJd32905UWcYPFlIltM64+58IpXw==",
+  "dgSpecHash": "+mMHtag5EjF5Jg1rDJGlR1xATeXcHsaJYwWGb0ofBs7Y1P34zi411nplb+S4OAAbYX5ZTfmFIOLUOcYdwiejpA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\TicketSale\\TicketSale\\TicketSale.Domain\\TicketSale.Domain.csproj",
+  "projectFilePath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.Domain\\TicketSale.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\amarildojunior_frwk\\.nuget\\packages\\commonservicelocator\\1.3.0\\commonservicelocator.1.3.0.nupkg.sha512",
     "C:\\Users\\amarildojunior_frwk\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",

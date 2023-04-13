@@ -8,13 +8,12 @@ namespace TicketSale.Data.Repositories
 {
     public class CurrencyRepository : ICurrencyRepository
     {
-        public async Task<Currency> GetCurrency(int number)
+        public async Task<List<Currency>> GetCurrency(CurrentType current)
         {
-            CurrentType teste = (CurrentType) number;
             HttpClient client = new HttpClient();
-            string url = $"https://economia.awesomeapi.com.br/last/{teste}-BRL";
+            string url = $"https://economia.awesomeapi.com.br/json/BRL-{current}";
             HttpResponseMessage response = await client.GetAsync(url);
-            Currency objeto = await response.Content.ReadFromJsonAsync<Currency>();
+            List<Currency> objeto = await response.Content.ReadFromJsonAsync<List<Currency>>();
             return objeto;
         }
     }

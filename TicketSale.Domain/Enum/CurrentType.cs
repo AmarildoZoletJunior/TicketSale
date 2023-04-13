@@ -4,6 +4,7 @@
     {
         USD = 1,
         BTC = 2,
-        EUR = 3
+        EUR = 3,
+        INR = 4
     }
 }

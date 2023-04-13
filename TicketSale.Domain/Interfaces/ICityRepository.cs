@@ -5,6 +5,6 @@ namespace TicketSale.Domain.Interfaces
 {
     public interface ICityRepository : IBaseRepository<City>
     {
-        Task<City> Update(City city);
+        public void Update(City city);
     }
 }

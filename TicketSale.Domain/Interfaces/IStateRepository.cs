@@ -5,6 +5,6 @@ namespace TicketSale.Domain.Interfaces
 {
     public interface IStateRepository : IBaseRepository<State>
     {
-        Task<State> Update(State state);
+        public void Update(State state);
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\TicketSale\\TicketSale\\TicketSale.Data\\TicketSale.Data.csproj": {}
+    "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.Data\\TicketSale.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\TicketSale\\TicketSale\\TicketSale.CrossCutting\\TicketSale.CrossCutting.csproj": {
+    "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.CrossCutting\\TicketSale.CrossCutting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\TicketSale\\TicketSale\\TicketSale.CrossCutting\\TicketSale.CrossCutting.csproj",
+        "projectUniqueName": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.CrossCutting\\TicketSale.CrossCutting.csproj",
         "projectName": "TicketSale.CrossCutting",
-        "projectPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\TicketSale\\TicketSale\\TicketSale.CrossCutting\\TicketSale.CrossCutting.csproj",
+        "projectPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.CrossCutting\\TicketSale.CrossCutting.csproj",
         "packagesPath": "C:\\Users\\amarildojunior_frwk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\TicketSale\\TicketSale\\TicketSale.CrossCutting\\obj\\",
+        "outputPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.CrossCutting\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\amarildojunior_frwk\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -77,14 +77,14 @@
         }
       }
     },
-    "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\TicketSale\\TicketSale\\TicketSale.Data\\TicketSale.Data.csproj": {
+    "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.Data\\TicketSale.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\TicketSale\\TicketSale\\TicketSale.Data\\TicketSale.Data.csproj",
+        "projectUniqueName": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.Data\\TicketSale.Data.csproj",
         "projectName": "TicketSale.Data",
-        "projectPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\TicketSale\\TicketSale\\TicketSale.Data\\TicketSale.Data.csproj",
+        "projectPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.Data\\TicketSale.Data.csproj",
         "packagesPath": "C:\\Users\\amarildojunior_frwk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\TicketSale\\TicketSale\\TicketSale.Data\\obj\\",
+        "outputPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\amarildojunior_frwk\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -101,11 +101,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\TicketSale\\TicketSale\\TicketSale.CrossCutting\\TicketSale.CrossCutting.csproj": {
-                "projectPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\TicketSale\\TicketSale\\TicketSale.CrossCutting\\TicketSale.CrossCutting.csproj"
+              "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.CrossCutting\\TicketSale.CrossCutting.csproj": {
+                "projectPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.CrossCutting\\TicketSale.CrossCutting.csproj"
               },
-              "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\TicketSale\\TicketSale\\TicketSale.Domain\\TicketSale.Domain.csproj": {
-                "projectPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\TicketSale\\TicketSale\\TicketSale.Domain\\TicketSale.Domain.csproj"
+              "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.Domain\\TicketSale.Domain.csproj": {
+                "projectPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.Domain\\TicketSale.Domain.csproj"
               }
             }
           }
@@ -120,6 +120,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.4, )"
@@ -165,14 +173,14 @@
         }
       }
     },
-    "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\TicketSale\\TicketSale\\TicketSale.Domain\\TicketSale.Domain.csproj": {
+    "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.Domain\\TicketSale.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\TicketSale\\TicketSale\\TicketSale.Domain\\TicketSale.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.Domain\\TicketSale.Domain.csproj",
         "projectName": "TicketSale.Domain",
-        "projectPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\TicketSale\\TicketSale\\TicketSale.Domain\\TicketSale.Domain.csproj",
+        "projectPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.Domain\\TicketSale.Domain.csproj",
         "packagesPath": "C:\\Users\\amarildojunior_frwk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\TicketSale\\TicketSale\\TicketSale.Domain\\obj\\",
+        "outputPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\amarildojunior_frwk\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -189,8 +197,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\TicketSale\\TicketSale\\TicketSale.CrossCutting\\TicketSale.CrossCutting.csproj": {
-                "projectPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\TicketSale\\TicketSale\\TicketSale.CrossCutting\\TicketSale.CrossCutting.csproj"
+              "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.CrossCutting\\TicketSale.CrossCutting.csproj": {
+                "projectPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.CrossCutting\\TicketSale.CrossCutting.csproj"
               }
             }
           }

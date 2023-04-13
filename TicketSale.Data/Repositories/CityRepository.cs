@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TicketSale.Data.Context;
 using TicketSale.Data.Repositories.Base;
 using TicketSale.Domain.Entities.CityEntity;
 using TicketSale.Domain.Interfaces;
@@ -15,9 +14,9 @@ namespace TicketSale.Data.Repositories
     {
         public CityRepository(TicketContext ticket) : base(ticket) { }
 
-        public Task<City> Update(City city)
+        public void Update(City city)
         {
-            throw new NotImplementedException();
+            _ticketContext.Cities.Update(city);
         }
     }
 }

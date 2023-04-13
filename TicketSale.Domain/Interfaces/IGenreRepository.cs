@@ -5,6 +5,6 @@ namespace TicketSale.Domain.Interfaces
 {
     public interface IGenreRepository : IBaseRepository<Genre>
     {
-        Task<Genre> Update(Genre genre);
+        public void Update(Genre genre);
     }
 }

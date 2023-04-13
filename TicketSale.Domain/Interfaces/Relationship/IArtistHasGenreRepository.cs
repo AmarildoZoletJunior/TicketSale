@@ -1,11 +1,10 @@
-﻿using TicketSale.Domain.Entities.ArtistHasGenreEntity;
-using TicketSale.Domain.Interfaces.Base;
+﻿using TicketSale.Domain.Entities.Relationship.ArtistHasGenreEntity;
 
 namespace TicketSale.Domain.Interfaces.Relationship
 {
-    public interface IArtistHasGenreRepository : IBaseRepository<ArtistHasGenre>
+    public interface IArtistHasGenreRepository
     {
-        Task<int> Delete(int artistId, int genreId);
-        Task<int> Update(int artistId, int genreId);
+        public void Delete(int artistId, int genreId);
+        public void Create(ArtistHasGenre artist);
     }
 }

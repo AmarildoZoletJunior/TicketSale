@@ -1,22 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TicketSale.Application.DTOs.ArtistDTOs.Response;
-using TicketSale.Application.DTOs.ResponseClass;
+﻿using TicketSale.Application.Interfaces;
+using TicketSale.Data.UnitOfWork;
 using TicketSale.Domain.Interfaces;
 
 namespace TicketSale.Application.Services.ArtistServices
 {
-    public class ArtistService
+    public class ArtistService : IArtistService
     {
+        private readonly IUnitOfWorkRepository _teste;
         private readonly IArtistRepository _artistRepository;
 
-        public ArtistService(IArtistRepository artist)
+        public ArtistService(IUnitOfWorkRepository teste, IArtistRepository artistRepository)
         {
-            _artistRepository = artist;
+            _teste = teste;
+            _artistRepository = artistRepository;
         }
-
     }
 }

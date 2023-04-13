@@ -6,7 +6,7 @@ namespace TicketSale.Domain.Interfaces
 {
     public interface ITicketRepository : IBaseRepository<Ticket>
     {
-        Task<Ticket> Update(Ticket ticket);
-        Task<int> Delete(int id);
+        public void Update(Ticket ticket);
+        public void Delete(Ticket ticket);
     }
 }

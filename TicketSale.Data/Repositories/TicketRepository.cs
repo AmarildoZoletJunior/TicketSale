@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
-using TicketSale.Data.Context;
 using TicketSale.Data.Repositories.Base;
 using TicketSale.Domain.Entities.TicketEntity;
 using TicketSale.Domain.Interfaces;
@@ -15,14 +15,14 @@ namespace TicketSale.Data.Repositories
     {
         public TicketRepository(TicketContext ticket) : base(ticket) { }
 
-        public Task<int> Delete(int id)
+        public void Delete(Ticket ticket)
         {
-            throw new NotImplementedException();
+            _ticketContext.Tickets.Remove(ticket);
         }
 
-        public Task<Ticket> Update(Ticket ticket)
+        public void Update(Ticket ticket)
         {
-            throw new NotImplementedException();
+            _ticketContext.Tickets.Update(ticket);
         }
     }
 }
