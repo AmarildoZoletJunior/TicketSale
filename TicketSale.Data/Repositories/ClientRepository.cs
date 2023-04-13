@@ -1,11 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using TicketSale.CrossCutting.Helper;
 using TicketSale.Data.Repositories.Base;
-using TicketSale.Domain.Entities.CityEntity;
 using TicketSale.Domain.Entities.ClientEntity;
 using TicketSale.Domain.Interfaces;
 using TicketSale.Domain.Interfaces.Base;
@@ -16,9 +11,40 @@ namespace TicketSale.Data.Repositories
     {
         public ClientRepository(TicketContext ticket) : base(ticket) { }
 
-        public async Task<Client> GetClientAuthAsync(Client client)
+        public async Task<int> AccountIsValid(string email, string password)
         {
-            return await _ticketContext.Clients.FirstOrDefaultAsync(x => x.Email == client.Email);
+            var passwordCrypt = CryptoHelper.EncryptPassword(password);
+            var AccountFind = await _ticketContext.Clients.Where(x => x.Password == passwordCrypt).Where(x => x.Email == email).FirstOrDefaultAsync();
+            if(AccountFind == null)
+            {
+                return 0;
+            }
+            return AccountFind.Id;
+        }
+
+        public async Task<bool> CPFIsUsed(string cpf)
+        {
+            var CpfFind = await _ticketContext.Clients.Where(x => x.PersonInfo.CPF == cpf).FirstOrDefaultAsync();
+            if (CpfFind == null)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public void CryptoPasswordClient(Client client)
+        {
+            client.Password = CryptoHelper.EncryptPassword(client.Password);
+        }
+
+        public async Task<bool> EmailIsUsed(string email)
+        {
+            var emailFind = await _ticketContext.Clients.Where(x => x.Email == email).FirstOrDefaultAsync();
+            if (emailFind == null)
+            {
+                return false;
+            }
+            return true;
         }
 
         public void Update(Client client)

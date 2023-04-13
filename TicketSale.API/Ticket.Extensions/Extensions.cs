@@ -9,6 +9,7 @@ using TicketSale.Application.Services.CurrencyServices;
 using TicketSale.Application.Services.TokenServices;
 using TicketSale.Application.Validators;
 using TicketSale.Data.Repositories;
+using TicketSale.Data.UnitOfWork;
 using TicketSale.Domain.Entities.ClientEntity;
 using TicketSale.Domain.Interfaces;
 
@@ -22,6 +23,8 @@ namespace TicketSale.API.Ticket.Extensions
             collection.AddScoped<IArtistRepository, ArtistRepository>();
             collection.AddScoped<ICurrencyRepository, CurrencyRepository>();
             collection.AddScoped<IClientRepository, ClientRepository>();
+            collection.AddScoped<ICityRepository, CityRepository>();
+            collection.AddScoped<IUnitOfWorkRepository, UnitOfWorkRepository>();
             #endregion
 
             #region Validators

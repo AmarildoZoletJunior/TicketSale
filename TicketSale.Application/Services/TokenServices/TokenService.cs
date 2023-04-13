@@ -24,9 +24,8 @@ namespace TicketSale.Application.Services.TokenServices
 
         public async Task<AuthResponse> GenerateTokenAsync(Client client)
         {
-            client.Password = CryptoHelper.EncryptPassword(client.Password);
-            var clientFind = await _clientRepository.GetClientAuthAsync(client);
-            if (clientFind == null)
+            var clientFind = await _clientRepository.AccountIsValid(client.Email,client.Password);
+            if (clientFind == 0)
             {
                 return new AuthResponse { IsValid = false };
             }
@@ -49,7 +48,7 @@ namespace TicketSale.Application.Services.TokenServices
             return new AuthResponse
             {
                 AuthToken = tokenString,
-                ClientId = client.Id,
+                ClientId = clientFind,
                 IsValid = true
             };
         }

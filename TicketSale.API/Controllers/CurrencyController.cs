@@ -21,7 +21,7 @@ namespace TicketSale.API.Controllers
         }
 
         [Authorize]
-        [HttpGet("/api/produtos")]
+        [HttpGet]
         public async Task<IActionResult> Get(int number) 
         {
             var response = await _currencyService.GetCurrency(number);

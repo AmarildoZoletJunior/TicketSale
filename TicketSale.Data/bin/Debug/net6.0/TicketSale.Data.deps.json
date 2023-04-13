@@ -1072,6 +1072,7 @@
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.Extensions.Configuration.UserSecrets": "6.0.1",
           "Newtonsoft.Json": "13.0.3",
+          "System.Security.Cryptography.ProtectedData": "5.0.0",
           "XAct.Core.PCL": "0.0.5014"
         },
         "runtime": {

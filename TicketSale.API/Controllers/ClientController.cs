@@ -28,7 +28,7 @@ namespace TicketSale.API.Controllers
            var result =  await _client.CreateUser(mappping);
             if (result.Success)
             {
-                return Ok(client);
+                return NoContent();
             }
             return BadRequest(result.Messages);
         }
