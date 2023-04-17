@@ -789,11 +789,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.Domain\\TicketSale.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\Projeto Ticket\\TicketSale\\TicketSale.Domain\\TicketSale.Domain.csproj",
       "projectName": "TicketSale.Domain",
-      "projectPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.Domain\\TicketSale.Domain.csproj",
+      "projectPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\Projeto Ticket\\TicketSale\\TicketSale.Domain\\TicketSale.Domain.csproj",
       "packagesPath": "C:\\Users\\amarildojunior_frwk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.Domain\\obj\\",
+      "outputPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\Projeto Ticket\\TicketSale\\TicketSale.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\amarildojunior_frwk\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -810,8 +810,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.CrossCutting\\TicketSale.CrossCutting.csproj": {
-              "projectPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.CrossCutting\\TicketSale.CrossCutting.csproj"
+            "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\Projeto Ticket\\TicketSale\\TicketSale.CrossCutting\\TicketSale.CrossCutting.csproj": {
+              "projectPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\Projeto Ticket\\TicketSale\\TicketSale.CrossCutting\\TicketSale.CrossCutting.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XFrUISKZc1po/nZ3SVFXSDaLN/0cZZtpcqOjGmCs5upt0XQCg0ovSeQ1N2VmeaYgi961GNqcdMyl2N/BTDU4YQ==",
+  "dgSpecHash": "UdpscOKfQnMwXEG6okwjuxVyfd56O14MzyNfLZjUgGCsAsp1kuhIAykpd4OQBcgnsqq48RUnd0RQ5Lrfw56jUg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.Data\\TicketSale.Data.csproj",
+  "projectFilePath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\Projeto Ticket\\TicketSale\\TicketSale.Data\\TicketSale.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\amarildojunior_frwk\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\amarildojunior_frwk\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

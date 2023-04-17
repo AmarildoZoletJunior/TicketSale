@@ -4942,11 +4942,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.API\\TicketSale.API.csproj",
+      "projectUniqueName": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\Projeto Ticket\\TicketSale\\TicketSale.API\\TicketSale.API.csproj",
       "projectName": "TicketSale.API",
-      "projectPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.API\\TicketSale.API.csproj",
+      "projectPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\Projeto Ticket\\TicketSale\\TicketSale.API\\TicketSale.API.csproj",
       "packagesPath": "C:\\Users\\amarildojunior_frwk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.API\\obj\\",
+      "outputPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\Projeto Ticket\\TicketSale\\TicketSale.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\amarildojunior_frwk\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4963,14 +4963,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.Application\\TicketSale.Application.csproj": {
-              "projectPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.Application\\TicketSale.Application.csproj"
+            "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\Projeto Ticket\\TicketSale\\TicketSale.Application\\TicketSale.Application.csproj": {
+              "projectPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\Projeto Ticket\\TicketSale\\TicketSale.Application\\TicketSale.Application.csproj"
             },
-            "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.CrossCutting\\TicketSale.CrossCutting.csproj": {
-              "projectPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.CrossCutting\\TicketSale.CrossCutting.csproj"
+            "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\Projeto Ticket\\TicketSale\\TicketSale.CrossCutting\\TicketSale.CrossCutting.csproj": {
+              "projectPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\Projeto Ticket\\TicketSale\\TicketSale.CrossCutting\\TicketSale.CrossCutting.csproj"
             },
-            "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.Data\\TicketSale.Data.csproj": {
-              "projectPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.Data\\TicketSale.Data.csproj"
+            "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\Projeto Ticket\\TicketSale\\TicketSale.Data\\TicketSale.Data.csproj": {
+              "projectPath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\Projeto Ticket\\TicketSale\\TicketSale.Data\\TicketSale.Data.csproj"
             }
           }
         }

@@ -16,7 +16,7 @@ namespace TicketSale.Application.Validators
         {
             RuleFor(x => x.Email)
                     .NotEmpty().WithName("Email").WithMessage("O campo email não pode ser vazio.")
-                    .NotNull().WithName("Email").WithMessage("O campo email não pode ser nulo")
+                    .NotNull().WithName("Email").WithMessage("O campo email não pode ser nulo.")
                     .EmailAddress().WithName("Email").WithMessage("O campo email esta inválido.");
 
             RuleFor(x => x.Password)
@@ -41,13 +41,14 @@ namespace TicketSale.Application.Validators
                 .NotEmpty().WithName("Nome").WithMessage("O campo Nome não pode ser vazio.")
                 .NotNull().WithName("Nome").WithMessage("O campo Nome não pode ser nulo");
 
+
             RuleFor(x => x.PersonInfo.Surname)
-                .NotEmpty().WithName("Cidade").WithMessage("O campo Cidade não pode ser vazio.")
-                .NotNull().WithName("Cidade").WithMessage("O campo Cidade não pode ser nulo");
+                .NotEmpty().WithName("Sobrenome").WithMessage("O campo Sobrenome não pode ser vazio.")
+                .NotNull().WithName("Sobrenome").WithMessage("O campo Sobrenome não pode ser nulo");
 
             RuleFor(x => x.PersonInfo.CPF)
                 .NotEmpty().WithName("CPF").WithMessage("O campo CPF não pode ser vazio.")
-                .NotNull().WithName("CPF").WithMessage("O campo CPF não pode ser nulo")
+                .NotNull().WithName("CPF").WithMessage("O campo CPF não pode ser nulo.")
                 .Must(x => ValidateCpf(x)).WithMessage("O campo CPF é inválido");
 
         }

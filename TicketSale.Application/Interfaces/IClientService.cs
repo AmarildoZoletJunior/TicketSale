@@ -7,6 +7,5 @@ namespace TicketSale.Application.Interfaces
     {
         public Task<Response<Client>> CreateUser(Client client);
         public Task<Response<Client>> UpdateUser(Client client);
-        public Task<Response<Client>> GetById(int id);
     }
 }

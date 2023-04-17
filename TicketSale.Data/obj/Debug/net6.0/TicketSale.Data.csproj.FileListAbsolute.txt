@@ -36,3 +36,22 @@ C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\teste\TicketSale\TicketSale\
 C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\teste\TicketSale\TicketSale\TicketSale.Data\obj\Debug\net6.0\TicketSale.Data.pdb
 C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\teste\TicketSale\TicketSale\TicketSale.Data\obj\Debug\net6.0\TicketSale.Data.genruntimeconfig.cache
 C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\teste\TicketSale\TicketSale\TicketSale.Data\obj\Debug\net6.0\ref\TicketSale.Data.dll
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\Projeto Ticket\TicketSale\TicketSale.Data\bin\Debug\net6.0\TicketSale.Data.deps.json
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\Projeto Ticket\TicketSale\TicketSale.Data\bin\Debug\net6.0\TicketSale.Data.runtimeconfig.json
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\Projeto Ticket\TicketSale\TicketSale.Data\bin\Debug\net6.0\TicketSale.Data.dll
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\Projeto Ticket\TicketSale\TicketSale.Data\bin\Debug\net6.0\TicketSale.Data.pdb
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\Projeto Ticket\TicketSale\TicketSale.Data\bin\Debug\net6.0\TicketSale.CrossCutting.dll
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\Projeto Ticket\TicketSale\TicketSale.Data\bin\Debug\net6.0\TicketSale.Domain.dll
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\Projeto Ticket\TicketSale\TicketSale.Data\bin\Debug\net6.0\TicketSale.CrossCutting.pdb
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\Projeto Ticket\TicketSale\TicketSale.Data\bin\Debug\net6.0\TicketSale.Domain.pdb
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\Projeto Ticket\TicketSale\TicketSale.Data\obj\Debug\net6.0\TicketSale.Data.csproj.AssemblyReference.cache
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\Projeto Ticket\TicketSale\TicketSale.Data\obj\Debug\net6.0\TicketSale.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\Projeto Ticket\TicketSale\TicketSale.Data\obj\Debug\net6.0\TicketSale.Data.AssemblyInfoInputs.cache
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\Projeto Ticket\TicketSale\TicketSale.Data\obj\Debug\net6.0\TicketSale.Data.AssemblyInfo.cs
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\Projeto Ticket\TicketSale\TicketSale.Data\obj\Debug\net6.0\TicketSale.Data.csproj.CoreCompileInputs.cache
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\Projeto Ticket\TicketSale\TicketSale.Data\obj\Debug\net6.0\TicketSale.Data.csproj.CopyComplete
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\Projeto Ticket\TicketSale\TicketSale.Data\obj\Debug\net6.0\TicketSale.Data.dll
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\Projeto Ticket\TicketSale\TicketSale.Data\obj\Debug\net6.0\refint\TicketSale.Data.dll
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\Projeto Ticket\TicketSale\TicketSale.Data\obj\Debug\net6.0\TicketSale.Data.pdb
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\Projeto Ticket\TicketSale\TicketSale.Data\obj\Debug\net6.0\TicketSale.Data.genruntimeconfig.cache
+C:\Users\amarildojunior_frwk\Desktop\Workspace\.Net\Projeto Ticket\TicketSale\TicketSale.Data\obj\Debug\net6.0\ref\TicketSale.Data.dll

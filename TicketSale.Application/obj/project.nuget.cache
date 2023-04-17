@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Dykqdd4gfQUcUp+zhdDDa8T3zQzw/oVeKALU1/XZmGdTnKPnwY7wXeijjUk7istXnkCiOv2WbkYU+pPUebP5AA==",
+  "dgSpecHash": "PfFNjCZUJHqEPdttGavxNkx3M5ugMfRL6RqpytPR/Wibt0Pohed0Y2AU3SZd42t/D8R+mREi+wem90s829B4IA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\teste\\TicketSale\\TicketSale\\TicketSale.Application\\TicketSale.Application.csproj",
+  "projectFilePath": "C:\\Users\\amarildojunior_frwk\\Desktop\\Workspace\\.Net\\Projeto Ticket\\TicketSale\\TicketSale.Application\\TicketSale.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\amarildojunior_frwk\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\amarildojunior_frwk\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

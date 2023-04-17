@@ -24,6 +24,15 @@ namespace TicketSale.Application.Services.ClientServices
         {
             var responseClass = new Response<Client>();
 
+            var classValidator = new ClientValidator();
+            var Validate = classValidator.Validate(client);
+
+            if (!Validate.IsValid)
+            {
+                Validate.Errors.ForEach(x => responseClass.AddMessage(x.PropertyName, x.ErrorMessage));
+                return responseClass;
+            }
+
             var cityFind = await _cityRepository.FindByIdAsync(client.CityId);
             if (cityFind == null)
             {
@@ -32,38 +41,25 @@ namespace TicketSale.Application.Services.ClientServices
             }
 
             var CpfIsUsed = await _client.CPFIsUsed(client.PersonInfo.CPF);
-            if (CpfIsUsed == null)
+            if (CpfIsUsed)
             {
                 responseClass.AddMessage("CPF já esta em uso", "Este CPF já esta sendo registrado no banco");
                 return responseClass;
             }
 
             var emailIsUsed = await _client.EmailIsUsed(client.Email);
-            if (emailIsUsed == null)
+            if (emailIsUsed)
             {
                 responseClass.AddMessage("Email já esta em uso", "Este email já esta sendo registrado no banco");
                 return responseClass;
             }
 
-            var classValidator = new ClientValidator();
-            var Validate = classValidator.Validate(client);
-            if (!Validate.IsValid) 
-            {
-                Validate.Errors.ForEach(x => responseClass.AddMessage(x.PropertyName, x.ErrorMessage));
-                return responseClass;
-            }
-
-
+       
             _client.CryptoPasswordClient(client);
             responseClass.AddData(client);
             await _client.Create(client);
             await _unit.Commit();
             return responseClass;
-        }
-
-        public Task<Response<Client>> GetById(int id)
-        {
-            throw new NotImplementedException();
         }
 
         public Task<Response<Client>> UpdateUser(Client client)
