@@ -32,7 +32,7 @@ namespace TicketSale.Data.Repositories.Base
 
         public async Task<IEnumerable<T>> GetAllPaged(PagedParameters parameters)
         {
-            return await _ticketContext.Set<T>().OrderBy(x => x.Id).Skip((parameters.NumberPage - 1) * parameters.PageSize).Take(parameters.PageSize).ToListAsync();
+            return await _ticketContext.Set<T>().OrderBy(x => x.Id).Skip((parameters.PageNumber - 1) * parameters.PageSize).Take(parameters.PageSize).ToListAsync();
         }
     }
 }

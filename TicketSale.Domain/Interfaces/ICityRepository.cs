@@ -6,5 +6,6 @@ namespace TicketSale.Domain.Interfaces
     public interface ICityRepository : IBaseRepository<City>
     {
         public void Update(City city);
+        public Task<City> FindByNameAsync(string name);
     }
 }

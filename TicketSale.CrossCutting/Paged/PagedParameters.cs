@@ -1,19 +1,21 @@
-﻿namespace TicketSale.CrossCutting.Paged
+﻿using System.Runtime.CompilerServices;
+
+namespace TicketSale.CrossCutting.Paged
 {
     public class PagedParameters
     {
-        public int PageSizeMax { get; private set; } = 50;
-        public int NumberPage { get; set; } = 1;
-        public int _PageSize { get; private set; } = 10;
+        const int maxPageSize = 50;
+        public int PageNumber { get; set; } = 1;
+        private int _pageSize = 10;
         public int PageSize
         {
             get
             {
-                return _PageSize;
+                return _pageSize;
             }
             set
             {
-                _PageSize = value > PageSizeMax ? PageSizeMax : value;
+                _pageSize = (value > maxPageSize) ? maxPageSize : value;
             }
         }
     }

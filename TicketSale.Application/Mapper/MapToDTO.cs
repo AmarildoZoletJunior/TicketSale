@@ -26,6 +26,7 @@ using TicketSale.Domain.Entities.Relationship.GenreHasEventEntity;
 using TicketSale.Domain.Entities.StateEntity;
 using TicketSale.Domain.Entities.TicketEntity;
 using TicketSale.Domain.Entities.TicketRegistrationEntity;
+using TicketSale.Domain.VO;
 
 namespace TicketSale.Application.Mapper
 {
@@ -43,8 +44,15 @@ namespace TicketSale.Application.Mapper
             CreateMap<Client, ClientResponseWithEntities>().ForMember(fln => fln.FullName, map => map.MapFrom(src => $"{src.PersonInfo.Name} {src.PersonInfo.Surname}"))
                 .ForMember(brthd => brthd.Birthday, map => map.MapFrom(src => src.PersonInfo.Birthday));
 
-            CreateMap<Client, ClientResponseWithId>().ForMember(fln => fln.FullName, map => map.MapFrom(src => $"{src.PersonInfo.Name} {src.PersonInfo.Surname}"))
-                .ForMember(brthd => brthd.Birthday, map => map.MapFrom(src => src.PersonInfo.Birthday));
+            CreateMap<Client, ClientResponseWithId>()
+                 .ForMember(brthd => brthd.Birthday, map => map.MapFrom(src => src.PersonInfo.Birthday))
+                 .ForMember(address => address.AdressInfo, map => map.MapFrom(src => src.AdressInfo))
+                 .ForMember(name => name.Name, map => map.MapFrom(src => src.PersonInfo.Name))
+                 .ForMember(surname => surname.Surname, map => map.MapFrom(src => src.PersonInfo.Surname))
+                 .ForMember(id => id.Id, map => map.MapFrom(src => src.Id))
+                 .ForMember(created => created.CreatedAt, map => map.MapFrom(src => src.CreatedAt))
+                 .ForMember(cityId => cityId.CityId, map => map.MapFrom(src => src.CityId));
+
 
             CreateMap<Event, EventResponseWithEntities>();
             CreateMap<Event, EventResponseWithId>();

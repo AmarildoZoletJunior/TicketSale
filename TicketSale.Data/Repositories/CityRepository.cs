@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,11 @@ namespace TicketSale.Data.Repositories
     public class CityRepository : BaseRepository<City>, IBaseRepository<City>, ICityRepository
     {
         public CityRepository(TicketContext ticket) : base(ticket) { }
+
+        public async Task<City> FindByNameAsync(string name)
+        {
+            return await _ticketContext.Cities.Where(x => x.CityName == name).FirstOrDefaultAsync();
+        }
 
         public void Update(City city)
         {

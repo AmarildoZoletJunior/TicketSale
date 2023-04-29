@@ -1,12 +1,7 @@
 using AutoMapper;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi.Models;
-using System.Text;
 using TicketSale.API.Ticket.Extensions;
 using TicketSale.Application.Mapper;
-using TicketSale.CrossCutting.Helper;
 using TicketSale.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,12 +12,14 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
-var configurationDTO = new MapperConfiguration(x => x.AddProfile(new MapToDTO()));
-var configurationEntity = new MapperConfiguration(x => x.AddProfile(new MapToEntity()));
+IEnumerable<Profile> profiles = new List<Profile>
+        {
+           new MapToEntity(),
+           new MapToDTO()
+        };
+var configurationDTO = new MapperConfiguration(x => x.AddProfiles(profiles));
 IMapper mapperEntity = configurationDTO.CreateMapper();
-IMapper mapperDto = configurationEntity.CreateMapper();
 builder.Services.AddSingleton(mapperEntity);
-builder.Services.AddSingleton(mapperDto);
 
 #region DependencyInjection
 
@@ -45,7 +42,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-
+app.UseCors(builder => builder.AllowAnyOrigin()
+                                  .AllowAnyHeader()
+                                  .AllowAnyMethod());
 app.UseHttpsRedirection();
 app.UseAuthentication();
 

@@ -34,7 +34,7 @@ namespace TicketSale.API.Controllers
             {
                 return Ok(token);
             }
-            return Unauthorized();
+            return Unauthorized("Não foi autorizado");
         }
     }
 }

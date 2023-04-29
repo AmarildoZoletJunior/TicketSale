@@ -9,6 +9,6 @@
         public string Surname { get; set; }
         public DateTime Birthday { get; set; }
         public string AdressInfo { get; set; }
-        public int CityId { get; set; }
+        public string CityName { get; set; }
     }
 }

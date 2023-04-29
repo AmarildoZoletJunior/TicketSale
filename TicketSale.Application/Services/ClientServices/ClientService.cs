@@ -1,6 +1,7 @@
 ﻿using TicketSale.Application.DTOs.ResponseDTO;
 using TicketSale.Application.Interfaces;
 using TicketSale.Application.Validators;
+using TicketSale.CrossCutting.Paged;
 using TicketSale.Data.UnitOfWork;
 using TicketSale.Domain.Entities.ClientEntity;
 using TicketSale.Domain.Interfaces;
@@ -59,6 +60,19 @@ namespace TicketSale.Application.Services.ClientServices
             responseClass.AddData(client);
             await _client.Create(client);
             await _unit.Commit();
+            return responseClass;
+        }
+
+        public async Task<Response<IEnumerable<Client>>> GetClients(PagedParameters paged)
+        {
+           var result = await _client.GetAllPaged(paged);
+            var responseClass = new Response<IEnumerable<Client>>();
+            if (!result.Any())
+            {
+                responseClass.AddMessage("Clientes não encontrado", "Não existe cliente nesta página");
+                return responseClass;
+            }
+            responseClass.AddData(result);
             return responseClass;
         }
 
